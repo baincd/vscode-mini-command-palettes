@@ -1,0 +1,11 @@
+.vscode/**
+**/*.ts
+**/*.map
+.gitignore
+tslint.json
+tsconfig.json
+webpack.config.js
+out/
+example-files/**
+*?.gitignored.?*
+*?.gitignored
