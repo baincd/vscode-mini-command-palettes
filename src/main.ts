@@ -9,6 +9,11 @@ let registeredCommandDisposables: vscode.Disposable[] = [];
 export function activate(context: vscode.ExtensionContext) {
 	context.subscriptions.push({ dispose: disposeRegisteredCommands});
 	reload();
+	vscode.workspace.onDidChangeConfiguration(e => {
+        if (e.affectsConfiguration(SETTINGS_PREFIX)) {
+            reload();
+        }
+    },null,context.subscriptions);
 }
 
 function disposeRegisteredCommands() {
