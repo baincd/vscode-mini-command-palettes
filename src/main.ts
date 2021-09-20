@@ -1,6 +1,9 @@
 import * as vscode from 'vscode';
 import { MiniCommandPaletteItem, PaletteConfigs } from './types';
 
+const SETTINGS_PREFIX = "baincd.mini-command-palettes";
+const PALETTE_COMMANDS_PREFIX = "baincd.mini-command-palettes.cmds";
+
 export function activate(context: vscode.ExtensionContext) {
 	reload();
 }
@@ -9,7 +12,7 @@ function reload() {
 	const configs = getPaletteConfigs();
 
 	for (const paletteName in unproxy(configs)) {
-		vscode.commands.registerCommand("baincd.mini-command-palettes.cmds." + paletteName, () => showPalette(paletteName));
+		vscode.commands.registerCommand(PALETTE_COMMANDS_PREFIX + "." + paletteName, () => showPalette(paletteName));
 	}
 }
 
@@ -24,7 +27,7 @@ function showPalette(paletteName: string) {
 }
 
 function getPaletteConfigs() {
-	return vscode.workspace.getConfiguration("baincd.mini-command-palettes").get("paletteConfigs") as PaletteConfigs;
+	return vscode.workspace.getConfiguration(SETTINGS_PREFIX).get("paletteConfigs") as PaletteConfigs;
 }
 
 function unproxy(original: any): any {
