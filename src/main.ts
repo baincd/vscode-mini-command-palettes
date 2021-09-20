@@ -4,15 +4,26 @@ import { MiniCommandPaletteItem, PaletteConfigs } from './types';
 const SETTINGS_PREFIX = "baincd.mini-command-palettes";
 const PALETTE_COMMANDS_PREFIX = "baincd.mini-command-palettes.cmds";
 
+let registeredCommandDisposables: vscode.Disposable[] = [];
+
 export function activate(context: vscode.ExtensionContext) {
+	context.subscriptions.push({ dispose: disposeRegisteredCommands});
 	reload();
 }
 
+function disposeRegisteredCommands() {
+	registeredCommandDisposables.forEach(d => d.dispose());
+	registeredCommandDisposables = [];
+}
+
 function reload() {
+	disposeRegisteredCommands();
+
 	const configs = getPaletteConfigs();
 
 	for (const paletteName in unproxy(configs)) {
-		vscode.commands.registerCommand(PALETTE_COMMANDS_PREFIX + "." + paletteName, () => showPalette(paletteName));
+		const cmd = vscode.commands.registerCommand(PALETTE_COMMANDS_PREFIX + "." + paletteName, () => showPalette(paletteName));
+		registeredCommandDisposables.push(cmd);
 	}
 }
 
