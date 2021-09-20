@@ -3,7 +3,7 @@
 	"name": "mini-command-palette",
 	"displayName": "Mini Command Palettes",
 	"description": "Create mini command palettes (quick pick list of commands)",
-	"version": "0.0.1-BETA",
+	"version": "0.0.1-BETA1",
 	"license": "MIT",
 	"engines": {
 		"vscode": "^1.32.0"
@@ -19,6 +19,50 @@
 		"onStartupFinished"
 	],
 	"main": "./dist/extension.js",
+	"contributes": {
+		"configuration": {
+			"properties": {
+				"baincd.mini-command-palettes.paletteConfigs": {
+					"type": "object",
+					"additionalProperties": {
+						"type": "array",
+						"items": {
+							"type": "object",
+							"properties": {
+								"label": {
+									"type": "string",
+									"description": "A human-readable string which is rendered prominent. Supports rendering of theme icons (https://code.visualstudio.com/api/references/icons-in-labels#icon-listing) via the $(<name>)-syntax."
+								},
+								"description": {
+									"type": "string",
+									"description": "A human-readable string which is rendered less prominent in the same line. Supports rendering of theme icons (https://code.visualstudio.com/api/references/icons-in-labels#icon-listing) via the $(<name>)-syntax."
+								},
+								"detail": {
+									"type": "string",
+									"description": "A human-readable string which is rendered less prominent in a separate line. Supports rendering of theme icons (https://code.visualstudio.com/api/references/icons-in-labels#icon-listing) via the $(<name>)-syntax."
+								},
+								"command": {
+									"type": "string",
+									"description": "Identifier of the command to execute.  Command IDs can be found from the Keyboard Shortcuts UI editor."
+								},
+								"commandArgs": {
+									"type": "array",
+									"description": "Parameters passed to the command function."
+								}
+							},
+							"required": [
+								"label",
+								"command"
+							]
+						},
+						"description": "Mini command palette"
+					},
+					"default": {},
+					"description": "Configuration of mini command palettes"
+				}
+			}
+		}
+	},
 	"scripts": {
 		"vscode:prepublish": "webpack --mode production",
 		"webpack": "webpack --mode development",
