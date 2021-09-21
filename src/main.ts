@@ -35,7 +35,7 @@ function reload() {
 function showPalette(paletteName: string) {
 	const configs = getPaletteConfigs();
 
-	vscode.window.showQuickPick(configs[paletteName]).then( (selected) => {
+	vscode.window.showQuickPick(configs[paletteName].commands,configs[paletteName]).then( (selected) => {
 		if (selected) {
 			vscode.commands.executeCommand(selected.command, ...(selected.commandArgs || []));
 		}
