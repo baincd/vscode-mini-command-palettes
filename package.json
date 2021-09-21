@@ -74,17 +74,55 @@
 									"required": [
 										"label",
 										"command"
+									],
+									"description": "Command line in palette",
+									"examples": [
+										{ "label": "Command Label", "command": "Command ID" }
 									]
 								},
-								"description": "Mini command palette"
+								"description": "Commands to display in palette",
+								"examples": [
+									[
+										{ "label": "Command Label", "command": "Command ID" },
+										{ "label": "Command Label", "command": "Command ID" }
+									]
+								]
 							}
 						},
+						"description": "Mini command palette",
 						"required": [
 							"commands"
+						],
+						"examples": [
+							{
+								"placeHolder": "placeholder text",
+								"commands": [
+									{ "label": "Command Label", "command": "Command ID" },
+									{ "label": "Command Label", "command": "Command ID" }
+								]
+							}
 						]
+
 					},
-					"default": {},
-					"description": "Configuration of mini command palettes"
+					"description": "Configuration of mini command palettes",
+					"examples": [
+						{
+							"my-palette-1": {
+								"placeHolder": "placeholder text",
+								"commands": [
+									{ "label": "Command Label", "command": "Command ID" },
+									{ "label": "Command Label", "command": "Command ID" }
+								]
+							},
+							"my-palette-2": {
+								"placeHolder": "placeholder text",
+								"commands": [
+									{ "label": "Command Label", "command": "Command ID" },
+									{ "label": "Command Label", "command": "Command ID" }
+								]
+							}
+						}
+					]
 				}
 			}
 		}
