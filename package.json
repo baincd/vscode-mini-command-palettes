@@ -52,15 +52,15 @@
 									"properties": {
 										"label": {
 											"type": "string",
-											"description": "A human-readable string which is rendered prominent. Supports rendering of theme icons (https://code.visualstudio.com/api/references/icons-in-labels#icon-listing) via the $(<name>)-syntax."
+											"description": "A human-readable string which is rendered prominent. Supports rendering of theme icons (https://code.visualstudio.com/api/references/icons-in-labels#icon-listing) via the $(&lt;name&gt;)-syntax."
 										},
 										"description": {
 											"type": "string",
-											"description": "A human-readable string which is rendered less prominent in the same line. Supports rendering of theme icons (https://code.visualstudio.com/api/references/icons-in-labels#icon-listing) via the $(<name>)-syntax."
+											"description": "A human-readable string which is rendered less prominent in the same line. Supports rendering of theme icons (https://code.visualstudio.com/api/references/icons-in-labels#icon-listing) via the $(&lt;name&gt;)-syntax."
 										},
 										"detail": {
 											"type": "string",
-											"description": "A human-readable string which is rendered less prominent in a separate line. Supports rendering of theme icons (https://code.visualstudio.com/api/references/icons-in-labels#icon-listing) via the $(<name>)-syntax."
+											"description": "A human-readable string which is rendered less prominent in a separate line. Supports rendering of theme icons (https://code.visualstudio.com/api/references/icons-in-labels#icon-listing) via the $(&lt;name&gt;)-syntax."
 										},
 										"command": {
 											"type": "string",
