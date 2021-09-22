@@ -77,14 +77,23 @@
 									],
 									"description": "Command line in palette",
 									"examples": [
-										{ "label": "Command Label", "command": "Command ID" }
+										{
+											"label": "Command Label",
+											"command": "Command ID"
+										}
 									]
 								},
 								"description": "Commands to display in palette",
 								"examples": [
 									[
-										{ "label": "Command Label", "command": "Command ID" },
-										{ "label": "Command Label", "command": "Command ID" }
+										{
+											"label": "Command Label",
+											"command": "Command ID"
+										},
+										{
+											"label": "Command Label",
+											"command": "Command ID"
+										}
 									]
 								]
 							}
@@ -97,12 +106,17 @@
 							{
 								"placeHolder": "placeholder text",
 								"commands": [
-									{ "label": "Command Label", "command": "Command ID" },
-									{ "label": "Command Label", "command": "Command ID" }
+									{
+										"label": "Command Label",
+										"command": "Command ID"
+									},
+									{
+										"label": "Command Label",
+										"command": "Command ID"
+									}
 								]
 							}
 						]
-
 					},
 					"description": "Configuration of mini command palettes",
 					"examples": [
@@ -110,15 +124,27 @@
 							"my-palette-1": {
 								"placeHolder": "placeholder text",
 								"commands": [
-									{ "label": "Command Label", "command": "Command ID" },
-									{ "label": "Command Label", "command": "Command ID" }
+									{
+										"label": "Command Label",
+										"command": "Command ID"
+									},
+									{
+										"label": "Command Label",
+										"command": "Command ID"
+									}
 								]
 							},
 							"my-palette-2": {
 								"placeHolder": "placeholder text",
 								"commands": [
-									{ "label": "Command Label", "command": "Command ID" },
-									{ "label": "Command Label", "command": "Command ID" }
+									{
+										"label": "Command Label",
+										"command": "Command ID"
+									},
+									{
+										"label": "Command Label",
+										"command": "Command ID"
+									}
 								]
 							}
 						}
