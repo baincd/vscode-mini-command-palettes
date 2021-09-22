@@ -3,7 +3,7 @@
 	"name": "mini-command-palettes",
 	"displayName": "Mini Command Palettes",
 	"description": "Create custom, mini command palettes (quick-pick lists of commands)",
-	"version": "0.0.1-BETA1",
+	"version": "1.0.0",
 	"license": "MIT",
 	"engines": {
 		"vscode": "^1.32.0"
