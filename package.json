@@ -1,8 +1,8 @@
 {
 	"publisher": "baincd",
-	"name": "mini-command-palette",
+	"name": "mini-command-palettes",
 	"displayName": "Mini Command Palettes",
-	"description": "Create mini command palettes (quick pick list of commands)",
+	"description": "Create custom, mini command palettes (quick-pick lists of commands)",
 	"version": "0.0.1-BETA1",
 	"license": "MIT",
 	"engines": {
