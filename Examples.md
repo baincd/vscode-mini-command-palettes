@@ -201,18 +201,18 @@ settings.json
 { "key": "ctrl+alt+;",           "command": "baincd.mini-command-palettes.cmds.java-dev" },
 ```
 
-## Git Palette (Ctrl+Alt+/)
+## Diff Palette (Ctrl+Alt+/)
 
-![](images/example-git-palette.png)
+![](images/example-diff-palette.png)
 
 settings.json
 ```jsonc
 "baincd.mini-command-palettes.paletteConfigs": {
-    "git-palette":{
-        "placeHolder": "Git",
+    "diff-palette": {
+        "placeHolder": "Diff",
         "commands": [
             {
-                "label": "Stage Selected Changes",
+                "label": "+  Stage Selected Changes",
                 "description": "     (Ctrl+K Ctrl+Alt+S)",
                 "command": "git.stageSelectedRanges"
             },
@@ -221,9 +221,25 @@ settings.json
                 "command": "git.stage"
             },
             {
-                "label": "Unstage Selected Changes",
+                "label": "−  Unstage Selected Changes",
                 "description": "     (Ctrl+K Ctrl+N)",
                 "command": "git.unstageSelectedRanges"
+            },
+            {
+                "label": "±  Open Diff (Working Copy)",
+                "command": "git.openChange"
+            },
+            {
+                "label": "$(go-to-file) Open File",
+                "command": "git.openFile"
+            },
+            {
+                "label": "$(diff) Toggle Inline / Side-By-Side",
+                "command": "toggle.diff.renderSideBySide"
+            },
+            {
+                "label": "␢  Toggle Show / Hide Whitespace Differences",
+                "command": "toggle.diff.ignoreTrimWhitespace"
             },
         ]
     }
@@ -231,5 +247,5 @@ settings.json
 ```
 
 ```jsonc
-{ "key": "ctrl+alt+/",           "command": "baincd.mini-command-palettes.cmds.git-palette"
+{ "key": "ctrl+alt+/",           "command": "baincd.mini-command-palettes.cmds.diff-palette"
 ```
