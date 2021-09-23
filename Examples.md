@@ -217,8 +217,8 @@ settings.json
                 "command": "git.stageSelectedRanges"
             },
             {
-                "label": "Stage All Changes",
-                "command": "git.stageAll"
+                "label": "⧺  Stage File",
+                "command": "git.stage"
             },
             {
                 "label": "Unstage Selected Changes",
