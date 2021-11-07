@@ -69,8 +69,23 @@
 										"commandArgs": {
 											"type": "array",
 											"description": "Parameters passed to the command function."
+										},
+										"showWhen": {
+											"type": "object",
+											"properties": {
+												"extensionEnabled": {
+													"type": "string",
+													"description": "Extension ID of extension that must be installed and enabled in the current workspace for this command to be shown in the mini command palette",
+													"examples": [
+														"example.extension-id"
+													]
+												}
+											},
+											"additionalProperties": false,
+											"description": "Conditions that control when the command is included in the list.  If no conditions are specified, command is always displayed."
 										}
 									},
+									"additionalProperties": false,
 									"required": [
 										"label",
 										"command"

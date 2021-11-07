@@ -10,5 +10,10 @@ export interface PaletteConfig extends vscode.QuickPickOptions {
 
 export interface MiniCommandPaletteItem extends vscode.QuickPickItem {
     command: string,
-    commandArgs?: any[]
+    commandArgs?: any[],
+    showWhen?: ShowWhenConditions
+}
+
+export interface ShowWhenConditions {
+    extensionEnabled?: string
 }
