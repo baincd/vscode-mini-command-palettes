@@ -31,7 +31,10 @@ This extension allows you to define as "custom mini command palettes", and bind 
                 "description": "Custom Command Description", // optional
                 "detail": "Custom Command Detail", // optional
                 "command": "command id",
-                "commandArgs": ["arg1", "arg2" ] // optional
+                "commandArgs": ["arg1", "arg2" ], // optional
+                "showWhen": { // optional
+                    "extensionEnabled": "example.extension-id"
+                }
             },
             {
                 "label": "Custom Command Label 2",
@@ -59,6 +62,8 @@ This extension allows you to define as "custom mini command palettes", and bind 
       "commandArgs": ["{Task Label}"]
 ```
 - VS Code does not support a command to start a specific launch configuration.  [As a workaround](https://stackoverflow.com/a/48650929/4764903), use the command id `workbench.action.debug.selectandstart` to display a popup to select the launch configuration to start.
+
+When `showWhen.extensionEnabled` is set, the command will only be displayed in the mini command palette when that extension is installed and enabled.
 
 
 ### Keyboard Shortcut 

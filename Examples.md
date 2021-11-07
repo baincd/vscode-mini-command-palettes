@@ -45,7 +45,10 @@ settings.json
             },
             {
                 "label": "$(pass) Show Todos",
-                "command": "workbench.view.extension.todo-tree-container"
+                "command": "workbench.view.extension.todo-tree-container",
+                "showWhen": {
+                    "extensionEnabled": "gruntfuggly.todo-tree"
+                }
             },
             {
                 "label": "$(kebab-vertical) Toggle Activity Bar",
@@ -169,7 +172,10 @@ settings.json
             },
             {
                 "label": "Go To Super Implementation",
-                "command": "java.action.navigateToSuperImplementation"
+                "command": "java.action.navigateToSuperImplementation",
+                "showWhen": {
+                    "extensionEnabled": "redhat.java"
+                }
             },
             {
                 "label": "Peek Type Definition",
@@ -190,7 +196,10 @@ settings.json
             },
             {
                 "label": "Show Type Hierarchy",
-                "command": "java.action.showTypeHierarchy"
+                "command": "java.action.showTypeHierarchy",
+                "showWhen": {
+                    "extensionEnabled": "redhat.java"
+                }
             },
         ]
     },
